@@ -1,0 +1,39 @@
+# .gitignore
+# for the virtual environment
+venv/
+env/
+ENV/
+
+# python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyd
+*.pyo
+*.so
+.Python
+
+# database
+*.sqlite3
+*.db
+*.sql
+
+# environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# django
+staticfiles/
+media/
+*.log
+
+courtside_analytics/settings/local.py
