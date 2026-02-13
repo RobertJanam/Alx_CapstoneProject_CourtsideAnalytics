@@ -6,17 +6,15 @@ from django.contrib.auth.admin import UserAdmin
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
     # to show custom fields in django admin
-    list_display = ('email', 'username', 'user_type', 'is_active')
-    list_filter = ('user_type', 'is_active')
+    list_display = ('email', 'username', 'is_active')
+    list_filter = ('is_active',)
 
     fieldsets = UserAdmin.fieldsets + (
         ('Custom Fields',
-        {'fields': ('user_type', 'phone_number'),
-        'description': 'Note: user_type is optional. Team-specific roles are managed in TeamMember.'
-        }),
+        {'fields': ('phone_number',)}),
 
     )
     add_fieldsets = UserAdmin.add_fieldsets + (
         ('Custom Fields',
-        {'fields': ('user_type', 'phone_number')}),
+        {'fields': ('phone_number',)}),
     )

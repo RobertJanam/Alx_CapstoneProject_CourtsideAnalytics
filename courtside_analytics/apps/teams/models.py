@@ -53,6 +53,11 @@ class Team(models.Model):
 # apps/teams/models.py (add this after Team model)
 
 class TeamMember(models.Model):
+    ROLE_CHOICES = (
+        ('COACH', 'Coach/Admin'),
+        ('PLAYER', 'Player'),
+    )
+
     POSITION_CHOICES = (
         ('PG', 'Point Guard'),
         ('SG', 'Shooting Guard'),
@@ -73,6 +78,13 @@ class TeamMember(models.Model):
         on_delete=models.CASCADE,
         related_name='members',
         verbose_name="Team"
+    )
+
+    role = models.CharField(
+        max_length=10,
+        choices=ROLE_CHOICES,
+        default='PLAYER',
+        verbose_name="Team Role"
     )
 
     position = models.CharField(
