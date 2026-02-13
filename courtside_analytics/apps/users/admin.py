@@ -11,7 +11,10 @@ class CustomUserAdmin(UserAdmin):
 
     fieldsets = UserAdmin.fieldsets + (
         ('Custom Fields',
-        {'fields': ('user_type', 'phone_number')}),
+        {'fields': ('user_type', 'phone_number'),
+        'description': 'Note: user_type is optional. Team-specific roles are managed in TeamMember.'
+        }),
+
     )
     add_fieldsets = UserAdmin.add_fieldsets + (
         ('Custom Fields',

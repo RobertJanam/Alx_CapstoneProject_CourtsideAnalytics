@@ -14,6 +14,8 @@ class CustomUser(AbstractUser):
     user_type = models.CharField(
         max_length=10,
         choices=USER_TYPE_CHOICES,
+        null=True,
+        blank=True,
         default='PLAYER',
         verbose_name='User Role'
     )
