@@ -96,7 +96,6 @@ class TeamMember(models.Model):
     )
 
     jersey_number = models.IntegerField(
-        unique=True,
         blank=True,
         null=True,
         verbose_name="Jersey Number"
@@ -112,11 +111,15 @@ class TeamMember(models.Model):
 
     class Meta:
         db_table = 'team_member'
-        unique_together = ['user', 'team']  # One membership per user per team
+
+        unique_together = [
+            ['user', 'team'], # One membership per user per team
+            ['team', 'jersey_number'] # unique jersey numbers within a team
+        ]
+
         ordering = ['joined_at']
         indexes = [
             models.Index(fields=['user', 'team']),
             models.Index(fields=['team']),
             models.Index(fields=['user']),
         ]
-
