@@ -10,6 +10,7 @@ from .serializers import (
     JoinTeamSerializer
 )
 
+
 # Create your views here.
 class TeamListView(generics.ListCreateAPIView):
     # this is an API endpoint for listing user's teams and creating new teams
@@ -40,6 +41,7 @@ class TeamListView(generics.ListCreateAPIView):
             team=team,
             role="COACH"
         )
+
 
 class TeamDetailView(generics.RetrieveUpdateDestroyAPIView):
     # This is an API endpoint for retrieving, updating and deleting a specific team
@@ -87,6 +89,7 @@ class TeamDetailView(generics.RetrieveUpdateDestroyAPIView):
         instance.is_active = False
         instance.save()
 
+
 class JoinTeamView(generics.CreateAPIView):
     # This is an API endpoint for joining a team using a join code
     # POST/api/teams/join/
@@ -123,6 +126,7 @@ class JoinTeamView(generics.CreateAPIView):
             },
             status=status.HTTP_201_CREATED
         )
+
 
 class TeamMembersView(generics.ListAPIView):
     # API endpoint for listing all members of this team
