@@ -20,6 +20,20 @@ class RegisterSerializer(serializers.ModelSerializer):
     # we need to accept password (but never return it)
     # confirm password matches
     # hash the password before saving
+
+    # defined password fields
+    password = serializers.CharField(
+        write_only=True,
+        style={'input_type': 'password'},
+        min_length=8
+    )
+
+    password2 = serializers.CharField(
+        write_only=True,
+        style={'input': 'password'},
+        label='Confirm Password'
+    )
+
     class Meta:
         model = CustomUser
 
@@ -34,34 +48,38 @@ class RegisterSerializer(serializers.ModelSerializer):
             },
             'username': {
                 'help_text': 'Required. Name that can be identified by other players is recommended.'
+            },
+            'phone_number': {
+                'required': False,
+                'allow_blank': True
             }
         }
 
-        def validate(self, data):
-            # runs a field level validation
-            # data is a dictionary containing all submited fields
-            password = data.get('password')
-            password2 = data.get('password2')
+    def validate(self, data):
+        # runs a field level validation
+        # data is a dictionary containing all submited fields
+        password = data.get('password')
+        password2 = data.get('password2', None)
 
-            if password != password2:
+        if password != password2:
 
-                # raise a validation error
-                raise serializers.ValidationError(
-                    {"password": "Password fields didn't match"}
-                )
+            # raise a validation error
+            raise serializers.ValidationError(
+                {"password": "Password fields didn't match"}
+            )
 
-            return data
+        return data
 
-        def create(self, validated_data):
-            # validated_data is the cleaned data after all validation passes
-            # password2 needs to be removed
+    def create(self, validated_data):
+        # validated_data is the cleaned data after all validation passes
+        # password2 needs to be removed
 
-            validated_data.pop('password2')
+        validated_data.pop('password2')
 
-            # **validated_data: ** is the dictionary unpacking op
-            user = CustomUser.objects.create_user(**validated_data)
+        # **validated_data: ** is the dictionary unpacking op
+        user = CustomUser.objects.create_user(**validated_data)
 
-            return user
+        return user
 
 
 class LoginSerializers(serializers.Serializer):
@@ -75,7 +93,8 @@ class LoginSerializers(serializers.Serializer):
     password = serializers.CharField(
         write_only=True, # only accept, never return
         style={'input_type': 'password'}, # ••• instead of 123
-        help_text = 'Your password'
+        help_text='Your password',
+        min_length=8
     )
 
     def validate(self, data):
@@ -98,6 +117,12 @@ class LoginSerializers(serializers.Serializer):
 
         #if not user was returned
         if not user:
+            raise serializers.ValidationError(
+                "Unable to log in with provided credentials."
+            )
+
+        # if not user is active
+        if not user.is_active:
             raise serializers.ValidationError(
                 "Unable to log in with provided credentials."
             )
