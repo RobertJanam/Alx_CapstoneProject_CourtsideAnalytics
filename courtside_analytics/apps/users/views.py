@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate
 from .models import CustomUser
-from .serializers import (UserSerializer, RegisterSerializer, LoginSerializers)
+from .serializers import (UserSerializer, RegisterSerializer, LoginSerializer)
 
 # Create your views here.
 class RegisterView(generics.CreateAPIView):
@@ -37,22 +37,30 @@ class LoginView(APIView):
     permission_classes = [permissions.AllowAny] # anyone can login
 
     def post(self, request):
-        serializer = LoginSerializers(data=request.data)
-        serializer.is_valid(raise_exception=True)
+        print("Login request data:", request.data)
 
-        #get the authenticated user from serializer
-        user = serializer.validated_data['user']
+        serializer = LoginSerializer(data=request.data)
 
-        #generate JWT tokens
-        # GET/api/auth/refresh/
-        refresh = RefreshToken.for_user(user)
+        if serializer.is_valid():
 
-        return Response({
-            'refresh': str(refresh),
-            'access': str(request.access_token),
-            'user': UserSerializer(user).data
-        })
+            #get the authenticated user from serializer
+            user = serializer.validated_data['user']
 
+            #generate JWT tokens
+            # GET/api/auth/refresh/
+            refresh = RefreshToken.for_user(user)
+
+            return Response({
+                'refresh': str(refresh),
+                'access': str(refresh.access_token),
+                'user': UserSerializer(user).data
+            }, status=status.HTTP_200_OK)
+
+        print("Validation errors:", serializer.errors)
+        return Response(
+            serializer.errors,
+            status=status.HTTP_400_BAD_REQUEST
+        )
 
 class UserProfileView(generics.RetrieveUpdateAPIView):
     # GET/api/users/me/ is for profile view

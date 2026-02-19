@@ -82,7 +82,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         return user
 
 
-class LoginSerializers(serializers.Serializer):
+class LoginSerializer(serializers.Serializer):
     # accept email/password and validate them
 
     email = serializers.EmailField(
