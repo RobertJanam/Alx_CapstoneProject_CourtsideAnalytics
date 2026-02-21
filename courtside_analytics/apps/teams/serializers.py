@@ -27,7 +27,7 @@ class TeamMemberSerializer(serializers.ModelSerializer):
             'is_active',
             'joined_at'
         ]
-        read_only_fields = ['id', 'joined_at', 'role']
+        read_only_fields = ['id', 'user_id', 'joined_at', 'role']
         extra_kwargs = {
             'position': {'allow_null': True, 'required': False, 'read_only': False},
             'jersey_number': {'allow_null': True, 'required': False, 'read_only': False}

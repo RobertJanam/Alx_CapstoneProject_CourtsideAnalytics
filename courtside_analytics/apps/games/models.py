@@ -129,19 +129,19 @@ class PlayerStat(models.Model):
     @property
     def field_goal_percentage(self):
         if self.field_goals_attempted > 0:
-            return round(self.field_goals_made / self.field_goals_attempted, 1)
+            return round(self.field_goals_made / self.field_goals_attempted, 1) * 100
         return 0.0
 
     @property
     def three_point_percentage(self):
         if self.three_points_attempted > 0:
-            return round(self.three_points_made / self.three_points_attempted, 1)
+            return round(self.three_points_made / self.three_points_attempted, 1) * 100
         return 0.0
 
     @property
     def free_throw_percentage(self):
         if self.free_throws_attempted > 0:
-            return round(self.free_throws_made / self.free_throws_attempted, 1)
+            return round(self.free_throws_made / self.free_throws_attempted, 1) * 100
         return 0.0
 
     @property

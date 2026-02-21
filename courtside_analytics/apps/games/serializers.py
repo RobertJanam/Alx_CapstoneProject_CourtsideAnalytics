@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import Game, PlayerStat
-from apps.teams.serializers import TeamMemberSerializer
 
 class PlayerStatSerializer(serializers.ModelSerializer):
     # readable player info

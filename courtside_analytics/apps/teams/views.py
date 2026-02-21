@@ -153,13 +153,13 @@ class TeamMembersView(generics.ListAPIView):
         ).select_related('user') # load user data
 
 
-class TeamMemberUpdateView(generics.UpdateAPIView):
+class TeamMemberDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TeamMemberSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         team_id = self.kwargs['team_id']
-        return TeamMember.objects.filter(team_id=team_id)
+        return TeamMember.objects.filter(team_id=team_id, is_active=True)
 
     def get_object(self):
         member_id = self.kwargs['member_id']
@@ -173,3 +173,11 @@ class TeamMemberUpdateView(generics.UpdateAPIView):
         if not TeamMember.objects.filter(user=self.request.user, team=team, role='COACH', is_active=True).exists():
             raise PermissionDenied("Only coaches can update team member details.")
         serializer.save()
+
+    def perform_destroy(self, instance):
+        # Only coaches can remove a member (soft delete)
+        team = instance.team
+        if not TeamMember.objects.filter(user=self.request.user, team=team, role='COACH', is_active=True).exists():
+            raise PermissionDenied("Only coaches can remove team members.")
+        instance.is_active = False
+        instance.save()

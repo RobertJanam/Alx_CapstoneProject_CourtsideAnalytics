@@ -6,6 +6,18 @@
   },
   "item": [
     {
+      "name": "Register_1",
+      "id": "f0acc765-f439-4b9f-9bdf-d366d80f3799",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Login_1",
       "id": "8cc837f2-2924-478b-8a04-f431e1cdaadd",
       "request": {
@@ -60,6 +72,18 @@
     {
       "name": "Login_2",
       "id": "c47b8d2f-3cb8-464e-8612-f69d77b63e54",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login_3",
+      "id": "9cd3b0af-0add-40fb-a231-9d562fcd803e",
       "request": {
         "method": "GET",
         "header": [],
@@ -199,8 +223,68 @@
       "response": []
     },
     {
-      "name": "Add Stat",
+      "name": "List Members",
       "id": "7c03698a-cb9e-465f-b634-b2a4df1208a4",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Member",
+      "id": "fe990f10-0d87-4268-88f4-17e4e8f5b7c7",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Member(Deny)",
+      "id": "62bcbdc0-e05c-4a83-8d34-463cd54673ab",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Player Stat",
+      "id": "2a82586b-73d0-4456-9f7a-42e5bd831efa",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Player Stat(Deny)",
+      "id": "2b8c724e-8d25-429b-90b1-06fa8ea2071a",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "View Player Stats",
+      "id": "9a698d46-c583-4abd-9e17-485b9060e232",
       "request": {
         "method": "GET",
         "header": [],
