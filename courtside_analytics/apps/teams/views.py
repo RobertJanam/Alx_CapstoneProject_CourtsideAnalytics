@@ -151,3 +151,25 @@ class TeamMembersView(generics.ListAPIView):
             team=team,
             is_active=True
         ).select_related('user') # load user data
+
+
+class TeamMemberUpdateView(generics.UpdateAPIView):
+    serializer_class = TeamMemberSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        team_id = self.kwargs['team_id']
+        return TeamMember.objects.filter(team_id=team_id)
+
+    def get_object(self):
+        member_id = self.kwargs['member_id']
+        return get_object_or_404(self.get_queryset(), id=member_id)
+
+    def perform_update(self, serializer):
+        team_member = self.get_object()
+        team = team_member.team
+
+        # only coaches can update member details
+        if not TeamMember.objects.filter(user=self.request.user, team=team, role='COACH', is_active=True).exists():
+            raise PermissionDenied("Only coaches can update team member details.")
+        serializer.save()

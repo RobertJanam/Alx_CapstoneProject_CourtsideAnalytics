@@ -15,7 +15,9 @@ class TeamMemberSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source='users.username', read_only=True)
 
     class Meta:
-        model = ['id',
+        model = TeamMember
+        fields = [
+            'id',
             'user',
             'username', # for reading
             'user_details',   # for reading
@@ -25,12 +27,10 @@ class TeamMemberSerializer(serializers.ModelSerializer):
             'is_active',
             'joined_at'
         ]
-
-        read_only_fields=['id', 'joined_at', 'role']
-
+        read_only_fields = ['id', 'joined_at', 'role']
         extra_kwargs = {
-            'position': {'allow_null': True, 'required': False},
-            'jersey_number': {'allow_null': True, 'required': False}
+            'position': {'allow_null': True, 'required': False, 'read_only': False},
+            'jersey_number': {'allow_null': True, 'required': False, 'read_only': False}
         }
 
     def validate_jersey_number(self, value):
@@ -96,6 +96,7 @@ class TeamDetailSerializer(serializers.ModelSerializer):
     created_by_username = serializers.CharField(source='created_by.username', read_only=True)
 
     class Meta:
+        model = Team
         fields = [
             'id',
             'name',
@@ -136,6 +137,6 @@ class JoinTeamSerializer(serializers.Serializer):
 
         code = data.get("join_code")
         team = Team.objects.get(join_code=code, is_active=True)
-        data['Team'] = team
+        data['team'] = team
 
         return data

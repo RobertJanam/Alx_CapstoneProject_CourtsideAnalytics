@@ -17,6 +17,7 @@ class GameListView(generics.ListCreateAPIView):
     # GET/api/teams/{team_id}/games/: List all games for a team
     # POST/api/teams/{team_id}/games/: create a new game (only coaches)
 
+    serializer_class = GameSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):

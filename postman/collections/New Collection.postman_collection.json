@@ -1,0 +1,214 @@
+{
+  "info": {
+    "_postman_id": "3663b3fc-7d13-4396-8dc8-ccc83ef6b825",
+    "name": "POSTMAN COURTSIDE API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login_1",
+      "id": "8cc837f2-2924-478b-8a04-f431e1cdaadd",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text",
+            "uuid": "8c290f3b-bf06-4436-8688-cd16bdd248bc"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"robertbmireri@gmail.com\",\r\n    \"password\": \"JAnam123@#\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/auth/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "auth",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login_2",
+      "id": "c47b8d2f-3cb8-464e-8612-f69d77b63e54",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Me",
+      "id": "f5bcd492-d911-4c65-912c-794216e9fbb2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Teams",
+      "id": "ee11c8c6-b223-45b0-b86c-df077b779914",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Team",
+      "id": "710d4632-efb5-43fe-9dfe-ad978300084e",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Join Team",
+      "id": "5571777b-05e6-4d46-ba4f-1ed5f495c7a5",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxNTMyMjczLCJpYXQiOjE3NzE1MzE5NzMsImp0aSI6IjUyNTI0OWU5NDM5NDRkNjVhZDM4MTZhMWMyNTQ1ZGE2IiwidXNlcl9pZCI6IjQifQ.l6oL3vkihy_AuDSbST2YqEQd-Rbyyw0qHu3kSceSctI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"team\": \"Kisumu Bucks\",\r\n    \"join_code\": \"5qt9Hetx\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/teams/join/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            "join",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Game",
+      "id": "adea154a-7d0c-47c3-a154-e7c3266a6405",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Games",
+      "id": "534d8506-2606-4fb2-8012-5ff4fdb63a2a",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Game Details",
+      "id": "6edae69a-96aa-42cd-a945-1f5b5d407452",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Game",
+      "id": "02f105ee-2e1d-48bb-948c-08619412957a",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Stat",
+      "id": "7c03698a-cb9e-465f-b634-b2a4df1208a4",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}

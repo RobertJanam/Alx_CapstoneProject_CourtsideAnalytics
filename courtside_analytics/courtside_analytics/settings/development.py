@@ -56,6 +56,17 @@ SWAGGER_SETTINGS = {
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # useful for testing password reset feature
 
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
 # Logging - More verbose for development
 LOGGING = {
     'version': 1,
