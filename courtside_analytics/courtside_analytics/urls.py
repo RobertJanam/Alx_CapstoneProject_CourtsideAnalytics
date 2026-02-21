@@ -35,6 +35,7 @@ urlpatterns = [
     path('api/auth/', include('apps.users.urls')),
     path('api/', include('apps.teams.urls')),
     path('api/', include('apps.games.urls')),
+    path('api/', include('apps.analytics.urls')),
 ]
 
 urlpatterns += [
