@@ -1,4 +1,3 @@
-# apps/analytics/utils.py
 from django.db.models import Avg, Sum, Count, Q, F
 from apps.games.models import PlayerStat, Game
 from apps.teams.models import Team, TeamMember
@@ -39,16 +38,10 @@ def get_player_averages(player_id, team_id=None):
 def get_team_leaderboard(team_id, stat='points', limit=10):
     # get the team leaderboard for a specific stat
     players = TeamMember.objects.filter(
-        team_id=team_id,
-        is_active=True,
-        role='PLAYER'
-    ).annotate(
+        team_id=team_id, is_active=True, role='PLAYER').annotate(
         total_stat=Sum(f'game_stats__{stat}'),
         games_played=Count('game_stats', distinct=True),
-        avg_stat=Avg(f'game_stats__{stat}')
-    ).filter(
-        games_played__gt=0
-    ).order_by('-total_stat')[:limit]
+        avg_stat=Avg(f'game_stats__{stat}')).filter(games_played__gt=0).order_by('-total_stat')[:limit]
 
     return [{
         'player_id': p.id,
