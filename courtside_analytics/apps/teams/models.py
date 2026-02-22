@@ -50,8 +50,6 @@ class Team(models.Model):
             models.Index(fields=['created_by']),
         ]
 
-# apps/teams/models.py (add this after Team model)
-
 class TeamMember(models.Model):
     ROLE_CHOICES = (
         ('COACH', 'Coach/Admin'),
