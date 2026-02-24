@@ -317,6 +317,18 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Analytics trend list",
+      "id": "5998f2c5-18d3-424c-bd33-a61bebf251b2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
     }
   ]
 }
