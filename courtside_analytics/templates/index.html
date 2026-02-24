@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to Basketball Courtside Analytics</h1>
+
+<p>This is an API for tracking basketball games and player stats</p>
+
+<h2>Available API Endpoints</h2>
+
+<h3>Authentication</h3>
+<ul>
+    <li>POST/api/auth/register/ - Register new user</li>
+    <li>POST/api/auth/login/ - Login</li>
+    <li>GET/api/auth/me/ - View profile</li>
+</ul>
+
+<h3>Teams</h3>
+<ul>
+    <li>GET/api/teams/ - List my teams</li>
+    <li>POST/api/teams/ - Create new team</li>
+    <li>POST/api/teams/join/ - Join team with code</li>
+    <li>GET/api/teams/{id}/ - View team details</li>
+</ul>
+
+<h3>Games</h3>
+<ul>
+    <li>GET/api/teams/{id}/games/ - List team games</li>
+    <li>POST/api/teams/{id}/games/ - Create game (coach only)</li>
+</ul>
+
+<p>You can use Postman to test the API endpoints</p>
+{% endblock %}
