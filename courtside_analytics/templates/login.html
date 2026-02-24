@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Login</h1>
+
+<form method="post" action="/api/auth/login/">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" class="btn">Login</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<p>No account? <a href="/register/">Register</a></p>
+{% endblock %}
