@@ -38,21 +38,29 @@ class TeamLeaderboardView(APIView):
         if not TeamMember.objects.filter(user=request.user, team=team, is_active=True).exists():
             raise PermissionDenied("You are not a member of this team")
 
-        stat = request.query_params.get('stat', 'points')
+        ppg = request.query_params.get('ppg', 'points')
+        ast = request.query_params.get('ast', 'assists')
+        rbd = request.query_params.get('rbd', 'rebounds')
+        stl = request.query_params.get('stl', 'steals')
+        blc = request.query_params.get('blc', 'blocks')
         limit = int(request.query_params.get('limit', 10))
 
         # validate stat
         allowed_stats = ['points', 'assists', 'rebounds', 'steals', 'blocks']
-        if stat not in allowed_stats:
+        if ppg not in allowed_stats or ast not in allowed_stats or rbd not in allowed_stats or stl not in allowed_stats or blc not in allowed_stats:
             return Response(
                 {"error": f"Stat must be one of: {', '.join(allowed_stats)}"},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        leaderboard = get_team_leaderboard(team_id, stat, limit)
+        leaderboard = get_team_leaderboard(team_id, ppg, ast, rbd, stl, blc, limit)
         return Response({
             'team': team.name,
-            'stat': stat,
+            'ppg': ppg,
+            'ast': ast,
+            'rbd': rbd,
+            'stl': stl,
+            'blc': blc,
             'leaderboard': leaderboard
         })
 

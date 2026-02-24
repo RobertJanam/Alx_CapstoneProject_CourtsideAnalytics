@@ -35,21 +35,39 @@ def get_player_averages(player_id, team_id=None):
         'total_points': totals['total_points'] or 0,
     }
 
-def get_team_leaderboard(team_id, stat='points', limit=10):
+def get_team_leaderboard(team_id, ppg='points', ast='assist', rbd='rebounds', stl='steals', blc='blocks', limit=10):
     # get the team leaderboard for a specific stat
     players = TeamMember.objects.filter(
-        team_id=team_id, is_active=True, role='PLAYER').annotate(
-        total_stat=Sum(f'game_stats__{stat}'),
+        team_id=team_id, is_active=True, role='PLAYER'
+    ).annotate(
+        total_points=Sum(f'game_stats__{ppg}'),
+        total_assists=Sum(f'game_stats__{ast}'),
+        total_rebounds=Sum(f'game_stats__{rbd}'),
+        total_steals=Sum(f'game_stats__{stl}'),
+        total_blocks=Sum(f'game_stats__{blc}'),
         games_played=Count('game_stats', distinct=True),
-        avg_stat=Avg(f'game_stats__{stat}')).filter(games_played__gt=0).order_by('-total_stat')[:limit]
+        avg_points=Avg(f'game_stats__{ppg}'),
+        avg_assists=Avg(f'game_stats__{ast}'),
+        avg_rebounds=Avg(f'game_stats__{rbd}'),
+        avg_steals=Avg(f'game_stats__{stl}'),
+        avg_blocks=Avg(f'game_stats__{blc}')
+    ).order_by(f'-total_{ppg}')[:limit]
 
     return [{
         'player_id': p.id,
         'player_name': p.user.username,
         'position': p.position,
         'jersey_number': p.jersey_number,
-        f'total_{stat}': p.total_stat or 0,
-        f'avg_{stat}': round(p.avg_stat or 0, 1),
+        f'avg_{ppg}': round(getattr(p, 'avg_points', 0) or 0, 1),
+        f'avg_{ast}': round(getattr(p, 'avg_assists', 0) or 0, 1),
+        f'avg_{rbd}': round(getattr(p, 'avg_rebounds', 0) or 0, 1),
+        f'avg_{stl}': round(getattr(p, 'avg_steals', 0) or 0, 1),
+        f'avg_{blc}': round(getattr(p, 'avg_blocks', 0) or 0, 1),
+        f'total_{ppg}': getattr(p, 'total_points', 0) or 0,
+        f'total_{ast}': getattr(p, 'total_assists', 0) or 0,
+        f'total_{rbd}': getattr(p, 'total_rebounds', 0) or 0,
+        f'total_{stl}': getattr(p, 'total_steals', 0) or 0,
+        f'total_{blc}': getattr(p, 'total_blocks', 0) or 0,
         'games_played': p.games_played
     } for p in players]
 

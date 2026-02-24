@@ -293,6 +293,30 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Analytics games",
+      "id": "cf733c3f-4c7b-4eb7-b865-929af0350457",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Analytics leaderboard stats",
+      "id": "51b623cb-3443-4235-a0d8-d7bdd265401a",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
     }
   ]
 }
