@@ -28,6 +28,8 @@ CORS_ALLOW_CREDENTIALS = True # allows browser to send cookies or authentication
                               # Without this, even if a user is logged in,
                               # their browser might block the transfer of their session info to the API
 
+TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'templates')]
+
 # DRF - More verbose for development
 REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = (
     'rest_framework.renderers.JSONRenderer',
@@ -88,3 +90,5 @@ LOGGING = {
         },
     },
 }
+
+INSTALLED_APPS += ['apps.frontend']
