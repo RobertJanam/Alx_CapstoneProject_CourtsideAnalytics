@@ -60,7 +60,7 @@ class TeamSerializer(serializers.ModelSerializer):
     members_count = serializers.IntegerField(source='members.count', read_only=True)
 
     # show creator's username
-    created_by_username = serializers.CharField(source='created_by.username')
+    created_by_username = serializers.CharField(source='created_by.username', read_only=True)
 
     class Meta:
         model = Team

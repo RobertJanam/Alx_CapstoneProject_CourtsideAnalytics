@@ -91,5 +91,3 @@ LOGGING = {
         },
     },
 }
-
-INSTALLED_APPS += ['apps.frontend']

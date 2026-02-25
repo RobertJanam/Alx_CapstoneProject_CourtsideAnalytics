@@ -130,9 +130,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/teams/'
 
-SESSION_COOKIE_AGE = 86400
-SESSION_SAVE_EVERY_REQUEST = True
-
 # default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField' # allows for 9 x 10^18 entries
 

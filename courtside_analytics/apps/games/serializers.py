@@ -87,7 +87,7 @@ class GameSerializer(serializers.ModelSerializer):
             'recorded_by',
             'recorded_at'
         ]
-        read_only_fields = ['id', 'recorded_at', 'recorded_by']
+        read_only_fields = ['id', 'recorded_at', 'recorded_by', 'team']
 
     def validate(self, data):
         # ensure quarter scores add up to final score
