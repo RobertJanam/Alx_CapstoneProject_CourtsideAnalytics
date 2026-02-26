@@ -173,7 +173,7 @@ Handles team creation, joining via codes, and roster management.
     "username": "TimDuncan",
     "role": "PLAYER",
     "position": "C",
-    "jersey_number": 23,
+    "jersey_number": 5,
     "is_active": true,
     "joined_at": "2026-02-25T11:30:00Z"
 }
