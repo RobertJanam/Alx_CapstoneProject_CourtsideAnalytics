@@ -1,8 +1,5 @@
-### analyticAPI
-Aggregated data and performance trends.
-
-```markdown
 # Analytics API
+Aggregated data and performance trends.
 
 **Base URL:** `http://127.0.0.1:8000/api/analytics/`
 **Headers:** `Authorization: Bearer <access_token>`

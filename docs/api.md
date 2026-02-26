@@ -7,17 +7,17 @@
 - All endpoints except registration and login require a valid access token
 - Include token in request header: `Authorization: Bearer <your_access_token>`
 
-**DOCUMENTATION**
+## DOCUMENTATION
 
-- *authAPI.md*
-- *userAPI.md*
-- *teamAPI.md*
-- *gameAPI.md*
-- *analyticAPI.md*
+- **authAPI.md**
+- **userAPI.md**
+- **teamAPI.md**
+- **gameAPI.md**
+- **analyticAPI.md**
 
-**Testing with Postman**
+## Testing with Postman
 
-*Setup Instructions:*
+**Setup Instructions:**
 - Create a new collection in Postman
 
 - Set up environment variables:
@@ -25,7 +25,7 @@
 - base_url = http://127.0.0.1:8000/api
 - access_token = (will be populated after login)
 
-*Test Flow:*
+**Test Flow:**
 
 - First: POST /auth/register/ to create a user
 
@@ -37,7 +37,7 @@
 
 - Authorization: Bearer {{access_token}}
 
-*Sample Test Sequence:*
+**Sample Test Sequence:**
 
 1. Register coach
 

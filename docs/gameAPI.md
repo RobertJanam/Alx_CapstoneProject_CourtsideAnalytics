@@ -1,8 +1,5 @@
-### gameAPI
-Manages game records, quarterly scores, and results.
-
-```markdown
 # Games API
+Manages game records, quarterly scores, and results.
 
 **Base URL:** `http://127.0.0.1:8000/api/`
 **Headers:** `Authorization: Bearer <access_token>`
@@ -11,7 +8,7 @@ Manages game records, quarterly scores, and results.
 
 ## Team Game Records
 
-# Create a new game record
+### Create a new game record
 * **Endpoint:** POST `/teams/{team_id}/games/`
 
 **Success Response(200 OK)**
@@ -34,7 +31,7 @@ Manages game records, quarterly scores, and results.
 
 ---
 
-# List all games for a team
+### List all games for a team
 * **Endpoint:** GET `/teams/{team_id}/games/`
 
 **Success Response (200 OK)**
@@ -76,7 +73,7 @@ Manages game records, quarterly scores, and results.
 
 ---
 
-# Fetch full game details, including player stats
+### Fetch full game details, including player stats
 * **Endpoint:** GET `/games/{id}/`
 
 **Success Response (200 OK)**
@@ -164,7 +161,7 @@ Manages game records, quarterly scores, and results.
 
 ---
 
-# Update game info (Coaches Only)
+### Update game info (Coaches Only)
 
 * **Endpoint:** PUT `/games/{id}/`
 
@@ -191,7 +188,7 @@ Manages game records, quarterly scores, and results.
 
 ---
 
-# Remove game (Coaches only)
+### Remove game (Coaches only)
 * **Endpoint:** DELETE `/games/{id}/`
 
 **Success Response:**

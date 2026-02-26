@@ -1,8 +1,5 @@
-### userAPI
-Manages the authenticated user's profile and settings.
-
-```markdown
 # User Profile API
+Manages the authenticated user's profile and settings.
 
 **Base URL:** `http://127.0.0.1:8000/api/auth/`
 **Headers:** `Authorization: Bearer <access_token>`

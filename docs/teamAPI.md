@@ -1,8 +1,5 @@
-### teamAPI
-Handles team creation, joining via codes, and roster management.
-
-```markdown
 # Team Management API
+Handles team creation, joining via codes, and roster management.
 
 **Base URL:** `http://127.0.0.1:8000/api/teams/`
 **Headers:** `Authorization: Bearer <access_token>`
@@ -10,7 +7,7 @@ Handles team creation, joining via codes, and roster management.
 
 ---
 
-## List & Create Teams
+### List & Create Teams
 * **GET `/`**: Returns all teams the user belongs to.
 * **POST `/`**: Create a new team.
 
@@ -23,7 +20,7 @@ Handles team creation, joining via codes, and roster management.
 ```
 
 ---
-## Join Team
+### Join Team
 
 * **Endpoint:** POST `/join/`
 
@@ -63,7 +60,7 @@ Handles team creation, joining via codes, and roster management.
 
 ---
 
-# Update team info (Coaches only)
+### Update team info (Coaches only)
 * **Endpoint:** PUT `/{id}/`
 
 **Request Body:**
@@ -83,7 +80,7 @@ Handles team creation, joining via codes, and roster management.
 
 ---
 
-# Delete team: Soft delete (Coaches only)
+### Delete team: Soft delete (Coaches only)
 * **Endpoint:** DELETE `/{id}/`
 * **Success Response:** 204 No Content
 
@@ -91,7 +88,7 @@ Handles team creation, joining via codes, and roster management.
 
 ## Roster Management
 
-# List members: players/coaches
+### List members: players/coaches
 * **Endpoint:** GET `/{team_id}/members/`
 
 **Response Body:**
@@ -141,7 +138,7 @@ Handles team creation, joining via codes, and roster management.
 
 ---
 
-# Update members for team (Coaches only)
+### Update members for team (Coaches only)
 * **Endpoint:** PUT `/{team_id}/members/{member_id}/`
 
 *Available position options: PG, SG, SF, C*
@@ -194,7 +191,7 @@ Handles team creation, joining via codes, and roster management.
 
 ---
 
-# Remove member (Coaches only)
+### Remove member (Coaches only)
 * **Endpoint:** DELETE `/{team_id}/members/{member_id}/`
 
 **Success Response:**

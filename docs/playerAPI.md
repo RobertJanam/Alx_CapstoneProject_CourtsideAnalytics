@@ -1,8 +1,5 @@
-### playerAPI
-Handles specific performance data (box scores) for players within a game.
-
-```markdown
 # Player Statistics API
+Handles specific performance data (box scores) for players within a game.
 
 **Base URL:** `http://127.0.0.1:8000/api/games/`
 **Headers:** `Authorization: Bearer <access_token>`
@@ -39,7 +36,7 @@ Submit performance data for a player in a specific game.
 
 ---
 
-# View player stats
+## View player stats
 
 * **Endpoint:** GET `/{game_id}/stats/`
 
