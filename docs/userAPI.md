@@ -48,4 +48,5 @@ Returns the authenticated user's profile.
     "email": "johndoe@gmail.com",
     "phone_number": "0723456789",
     "date_joined": "date joined"
-}```
+}
+```

@@ -3,7 +3,6 @@ Handles team creation, joining via codes, and roster management.
 
 **Base URL:** `http://127.0.0.1:8000/api/teams/`
 **Headers:** `Authorization: Bearer <access_token>`
-**Alternative:** `Use Postman`
 
 ---
 
@@ -141,18 +140,17 @@ Handles team creation, joining via codes, and roster management.
 ### Update members for team (Coaches only)
 * **Endpoint:** PUT `/{team_id}/members/{member_id}/`
 
-*Available position options: PG, SG, SF, C*
-*Position constraint: `Unique for every member`*
+*Available position options:* PG, SG, SF, C
+
+*Position constraint:* Unique for every member
 
 
 *Default*
 ```json
 {
-    ...
     "user": 1,
     "position": null,
     "jersey": null
-    ...
 }
 ```
 
