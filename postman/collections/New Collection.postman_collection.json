@@ -329,6 +329,18 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Analytics average",
+      "id": "9d359098-0fe6-4ebf-a698-5066fc4fd25d",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
     }
   ]
 }
