@@ -158,7 +158,7 @@ Handles team creation, joining via codes, and roster management.
 
 ```json
 {
-    "user": 1,
+    "user": 2,
     "position": "C",
     "jersey": "5"
 }
