@@ -33,10 +33,10 @@ Handles team creation, joining via codes, and roster management.
 
 ```json
 {
-    "message": "Successfully joined Nairobi Lions",
+    "message": "Successfully joined Kisumu Bucks",
     "team": {
         "id": 1,
-        "name": "Nairobi Lions",
+        "name": "Kisumu Bucks",
         "join_code": "aB3xK9mP",
         "members_count": 2
     },
@@ -66,7 +66,7 @@ Handles team creation, joining via codes, and roster management.
 
 ```json
 {
-    "name": "Nairobi Lions Elite",
+    "name": "Nairobi Lions",
     "description": "Updated team description"
 }
 ```
@@ -123,13 +123,13 @@ Handles team creation, joining via codes, and roster management.
                 "username": "TimDuncan",
                 "email": "timduncan@gmail.com",
                 "phone_number": null,
-                "date_joined": "2026-02-21T11:31:30.426498Z"
+                "date_joined": "date joined"
             },
             "role": "PLAYER",
             "position": "C",
             "jersey_number": 5,
             "is_active": true,
-            "joined_at": "2026-02-21T11:33:16.164741Z"
+            "joined_at": "date joined"
         }
     ]
 }
@@ -175,7 +175,7 @@ Handles team creation, joining via codes, and roster management.
     "position": "C",
     "jersey_number": 5,
     "is_active": true,
-    "joined_at": "2026-02-25T11:30:00Z"
+    "joined_at": "date joined"
 }
 ```
 
