@@ -16,7 +16,7 @@ First off, thank you for considering contributing to this project! It's people l
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [robertbjanam@gmail.com].
+This project and everyone participating in it is governed by my [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [robertbjanam@gmail.com].
 
 ---
 
@@ -45,8 +45,8 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/Robert
 
 Unsure where to begin? You can start by looking through `good first issue` and `help wanted` issues:
 
-- [Good First Issues](https://github.com/RobertJanam/Alx_CapstoneProject_CourtsideAnalytics/labels/good%20first%20issue) - tasks that should only require a few lines of code and minimal context.
-- [Help Wanted Issues](https://github.com/RobertJanam/Alx_CapstoneProject_CourtsideAnalytics/labels/help%20wanted) - tasks that are more involved but still approachable.
+- [Good First Issues](https://github.com/RobertJanam/Alx_CapstoneProject_CourtsideAnalytics/issues/1) - tasks that should only require a few lines of code and minimal context.
+- [Help Wanted Issues](https://github.com/RobertJanam/Alx_CapstoneProject_CourtsideAnalytics/labels/help%20wanted) - tasks that are more involved but still approachable. (Not available now)
 
 ---
 
