@@ -79,10 +79,11 @@ class TeamDetailView(generics.RetrieveUpdateDestroyAPIView):
         # check if user is a coach of this team
         if not TeamMember.objects.filter(
             user=self.request.user, team=team,
-            role="COACH").exists():
+            role="COACH", is_active=True).exists():
 
             raise PermissionDenied("Only team coaches can update team information.")
-            serializer.save()
+
+        serializer.save()
 
     def perform_destroy(self, instance):
         # delete team (but soft delete)

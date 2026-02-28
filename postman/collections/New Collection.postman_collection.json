@@ -9,10 +9,34 @@
       "name": "Register_1",
       "id": "f0acc765-f439-4b9f-9bdf-d366d80f3799",
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/analytics/games/2/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "analytics",
+            "games",
+            "2",
+            ""
+          ]
         }
       },
       "response": []
@@ -73,10 +97,33 @@
       "name": "Login_2",
       "id": "c47b8d2f-3cb8-464e-8612-f69d77b63e54",
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"johnsmith@gmail.com\",\r\n    \"password\": \"SMith123@#\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/auth/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "auth",
+            "login",
+            ""
+          ]
         }
       },
       "response": []
@@ -85,10 +132,33 @@
       "name": "Login_3",
       "id": "9cd3b0af-0add-40fb-a231-9d562fcd803e",
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"timduncan@gmail.com\",\r\n    \"password\": \"TIm123@#\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/auth/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "auth",
+            "login",
+            ""
+          ]
         }
       },
       "response": []
@@ -97,10 +167,33 @@
       "name": "Me",
       "id": "f5bcd492-d911-4c65-912c-794216e9fbb2",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxNTMxMDQzLCJpYXQiOjE3NzE1MzA3NDMsImp0aSI6Ijk1ZjkyNDIxMWExMjQ2MDFhMmVmMDgxYzRkMmMzNDY2IiwidXNlcl9pZCI6IjUifQ.Ssl1OilLKilfC8RUGj7EZ0wkvVoCm0kku6YgifJw2FY",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/auth/me",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "auth",
+            "me"
+          ]
         }
       },
       "response": []
@@ -109,10 +202,33 @@
       "name": "Teams",
       "id": "ee11c8c6-b223-45b0-b86c-df077b779914",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxNTMxNDA3LCJpYXQiOjE3NzE1MzExMDcsImp0aSI6IjYxMzRhODg4NGEyOTQwYzE4YzU4YWI0NWI5ZjQ0NDBjIiwidXNlcl9pZCI6IjUifQ.R-GI9hYwJ8SEavrYG32zOLFNkkOKUKZREWtmXxytjEY",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/teams/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            ""
+          ]
         }
       },
       "response": []
@@ -121,10 +237,42 @@
       "name": "Create Team",
       "id": "710d4632-efb5-43fe-9dfe-ad978300084e",
       "request": {
-        "method": "GET",
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxNTMxNDA3LCJpYXQiOjE3NzE1MzExMDcsImp0aSI6IjYxMzRhODg4NGEyOTQwYzE4YzU4YWI0NWI5ZjQ0NDBjIiwidXNlcl9pZCI6IjUifQ.R-GI9hYwJ8SEavrYG32zOLFNkkOKUKZREWtmXxytjEY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Kisumu Bucks\",\r\n    \"created_by_username\": \"MireriRobert\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/teams/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            ""
+          ]
         }
       },
       "response": []
@@ -138,7 +286,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxNTMyMjczLCJpYXQiOjE3NzE1MzE5NzMsImp0aSI6IjUyNTI0OWU5NDM5NDRkNjVhZDM4MTZhMWMyNTQ1ZGE2IiwidXNlcl9pZCI6IjQifQ.l6oL3vkihy_AuDSbST2YqEQd-Rbyyw0qHu3kSceSctI",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxNjczODQxLCJpYXQiOjE3NzE2NzM1NDEsImp0aSI6IjIyMDQ2Y2Y5M2M4OTRlMWM4MGViOTlhZWVkZTdjNDI3IiwidXNlcl9pZCI6IjYifQ.lBjTP8ef-Jv3ulIH-6Q4FMUH08f7nrumU2XK5F-hyXY",
               "type": "string"
             }
           ]
@@ -175,13 +323,92 @@
       "response": []
     },
     {
+      "name": "Update team",
+      "id": "1288c977-95da-4d86-8662-1127b91a4271",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzAyMDU3LCJpYXQiOjE3NzIzMDE3NTcsImp0aSI6IjdmN2VjYzZiOTY3MDQ3MDE5NDU2NTlkYjRmN2FmMDYzIiwidXNlcl9pZCI6IjUifQ.Cmik8CeLSOuvXfPeSVsehkZpnwRjn7jwTLKywtIcALg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Kisumu Buck\",\r\n    \"description\": \"Changed team name\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/teams/2/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Create Game",
       "id": "adea154a-7d0c-47c3-a154-e7c3266a6405",
       "request": {
-        "method": "GET",
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxNjY0Nzc2LCJpYXQiOjE3NzE2NjQ0NzYsImp0aSI6Ijk0NmYwZGFiNTI1OTQ2M2ZiZDQyZDQ4Y2E0MThhOGVhIiwidXNlcl9pZCI6IjQifQ.u0vx50gUoWB_deb82uVkC7WqYphyKWbi0D1ApiD_J9M",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"team\": 2,\r\n    \"opponent_name\": \"Mombasa Sharks\",\r\n    \"game_date\": \"2026-02-20\",\r\n    \"team_score\": 78,\r\n    \"opponent_score\": 65,\r\n    \"q1_team\": 17,\r\n    \"q1_opponent\": 13,\r\n    \"q2_team\": 15,\r\n    \"q2_opponent\": 20,\r\n    \"q3_team\": 25,\r\n    \"q3_opponent\": 17,\r\n    \"q4_team\": 21,\r\n    \"q4_opponent\":15\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/teams/2/games/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            "2",
+            "games",
+            ""
+          ]
         }
       },
       "response": []
@@ -190,10 +417,35 @@
       "name": "List Games",
       "id": "534d8506-2606-4fb2-8012-5ff4fdb63a2a",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTM1OTAxLCJpYXQiOjE3NzIxMzU2MDEsImp0aSI6IjJjM2JmNjE4NjFlMzRmYWNiNDJkMDI5MzJlMmZlMjRmIiwidXNlcl9pZCI6IjYifQ.darE2a0qcFMUbz1Gm7gFEqe9YJmGSBk8WafR0VKxsLY",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/teams/2/games/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            "2",
+            "games",
+            ""
+          ]
         }
       },
       "response": []
@@ -202,10 +454,34 @@
       "name": "Game Details",
       "id": "6edae69a-96aa-42cd-a945-1f5b5d407452",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTM2MjA1LCJpYXQiOjE3NzIxMzU5MDUsImp0aSI6IjZiNTIzNzVlNmYxNTQwZTdiMDVlNzQ1YzdlYjYwNzY3IiwidXNlcl9pZCI6IjYifQ.5TUOwJDrGJlyU8cM__4b-cS9q8yy-4G81FO6yQzXBKE",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/games/2/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "games",
+            "2",
+            ""
+          ]
         }
       },
       "response": []
@@ -214,10 +490,43 @@
       "name": "Update Game",
       "id": "02f105ee-2e1d-48bb-948c-08619412957a",
       "request": {
-        "method": "GET",
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxNjY3ODI5LCJpYXQiOjE3NzE2Njc1MjksImp0aSI6IjczOWNlNTBlYzYxMzRlYTRiM2UyMGU5YzJhNzRjMzk3IiwidXNlcl9pZCI6IjQifQ.Jw2Q7wHVffGPd9JVwyPDhom6S7MtzJ6cM635zFHoCaY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"team\": 2,\r\n    \"opponent_name\": \"Kisumu Raiders\",\r\n    \"game_date\": \"2026-02-21\",\r\n    \"team_score\": 78,\r\n    \"opponent_score\": 65,\r\n    \"q1_team\": 17,\r\n    \"q1_opponent\": 13,\r\n    \"q2_team\": 15,\r\n    \"q2_opponent\": 20,\r\n    \"q3_team\": 25,\r\n    \"q3_opponent\": 17,\r\n    \"q4_team\": 21,\r\n    \"q4_opponent\":15\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/games/2/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "games",
+            "2",
+            ""
+          ]
         }
       },
       "response": []
@@ -226,10 +535,44 @@
       "name": "List Members",
       "id": "7c03698a-cb9e-465f-b634-b2a4df1208a4",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTQwMDg0LCJpYXQiOjE3NzIxMzk3ODQsImp0aSI6ImFkNmVkZTBlZGY5MTQ4MWRiZjZlODliODU4NTgwZDlhIiwidXNlcl9pZCI6IjYifQ.Rvz5A5SZJVqVza0AqrZI5eO2_ULmqBIjjMVVcfJ5Qf4",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/teams/2/members/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            "2",
+            "members",
+            ""
+          ]
         }
       },
       "response": []
@@ -238,10 +581,45 @@
       "name": "Update Member",
       "id": "fe990f10-0d87-4268-88f4-17e4e8f5b7c7",
       "request": {
-        "method": "GET",
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxOTE5NjIxLCJpYXQiOjE3NzE5MTkzMjEsImp0aSI6IjllMDk3Njk0MzQ4OTQ3NTViZGFjODNlMWMyMzJhNmZkIiwidXNlcl9pZCI6IjUifQ.zulh9A-eEOAOMgv7hmM6qNI27XNm5plfDDC08eaiHBY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"user\": 6,\r\n    \"position\": \"C\",\r\n    \"jersey_number\": \"5\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/teams/2/members/5/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            "2",
+            "members",
+            "5",
+            ""
+          ]
         }
       },
       "response": []
@@ -250,10 +628,45 @@
       "name": "Update Member(Deny)",
       "id": "62bcbdc0-e05c-4a83-8d34-463cd54673ab",
       "request": {
-        "method": "GET",
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxNjcyNDY3LCJpYXQiOjE3NzE2NzIxNjcsImp0aSI6IjA2ZjQzZTFiMTFmYjQ4NzNhMDg5OWUxOWE5OGUzMTZiIiwidXNlcl9pZCI6IjQifQ.AecmPXZNdmyJM3Cmk0UN43fnAksuwhJVe9f-iaAqB_k",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"user\": 4,\r\n    \"position\": \"SF\",\r\n    \"jersey_number\": \"10\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/teams/2/members/4/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            "2",
+            "members",
+            "4",
+            ""
+          ]
         }
       },
       "response": []
@@ -262,10 +675,45 @@
       "name": "Add Player Stat",
       "id": "2a82586b-73d0-4456-9f7a-42e5bd831efa",
       "request": {
-        "method": "GET",
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxOTE5NjIxLCJpYXQiOjE3NzE5MTkzMjEsImp0aSI6IjllMDk3Njk0MzQ4OTQ3NTViZGFjODNlMWMyMzJhNmZkIiwidXNlcl9pZCI6IjUifQ.zulh9A-eEOAOMgv7hmM6qNI27XNm5plfDDC08eaiHBY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"user\": 6,\r\n    \"player\": 5,\r\n    \"game\": 2,\r\n    \"minutes_played\": \"28\",\r\n    \"points\": 27,\r\n    \"assists\": 3,\r\n    \"rebounds\": 8,\r\n    \"steals\": 1,\r\n    \"blocks\": 4,\r\n    \"turnovers\": 2,\r\n    \"fouls\": 5,\r\n    \"field_goals_made\": 10,\r\n    \"field_goals_attempted\": 17,\r\n    \"three_points_made\": 2,\r\n    \"three_points_attempted\": 2,\r\n    \"free_throws_made\": 1,\r\n    \"free_throws_attempted\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/games/2/stats/add/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "games",
+            "2",
+            "stats",
+            "add",
+            ""
+          ]
         }
       },
       "response": []
@@ -274,10 +722,45 @@
       "name": "Add Player Stat(Deny)",
       "id": "2b8c724e-8d25-429b-90b1-06fa8ea2071a",
       "request": {
-        "method": "GET",
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTM3MzgzLCJpYXQiOjE3NzIxMzcwODMsImp0aSI6ImJmOWNiYmJhOWUyZTRhYzM4MDMxODM3MGY1OTA1NmY3IiwidXNlcl9pZCI6IjYifQ.NhQqhBAkMr2xpNGhmV9FBtapKYNeeSleyXz2DmJrgfs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"user\": 6,\r\n    \"player\": 5,\r\n    \"game\": 2,\r\n    \"minutes_played\": \"27\",\r\n    \"points\": 21,\r\n    \"assists\": 4,\r\n    \"rebounds\": 3,\r\n    \"steals\": 1,\r\n    \"blocks\": 0,\r\n    \"turnovers\": 3,\r\n    \"fouls\": 1,\r\n    \"field_goals_made\": 9,\r\n    \"field_goals_attempted\": 14,\r\n    \"three_points_made\": 1,\r\n    \"three_points_attempted\": 3,\r\n    \"free_throws_made\": 0,\r\n    \"free_throws_attempted\": 0 \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/games/2/stats/add/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "games",
+            "2",
+            "stats",
+            "add",
+            ""
+          ]
         }
       },
       "response": []
@@ -286,10 +769,35 @@
       "name": "View Player Stats",
       "id": "9a698d46-c583-4abd-9e17-485b9060e232",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTM3MDYzLCJpYXQiOjE3NzIxMzY3NjMsImp0aSI6IjM1YWM1YmY3YTZiZDRiOTRiNjc4MDNjYTQ0ZmQ3Y2EyIiwidXNlcl9pZCI6IjYifQ._v5TEo4YTYrDR4wqrTnm5v9D9egywHHX9pMxTC6p61Y",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/games/2/stats/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "games",
+            "2",
+            "stats",
+            ""
+          ]
         }
       },
       "response": []
@@ -298,10 +806,35 @@
       "name": "Analytics games",
       "id": "cf733c3f-4c7b-4eb7-b865-929af0350457",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTM3ODgzLCJpYXQiOjE3NzIxMzc1ODMsImp0aSI6ImQ5N2IxNmRhYjNjNDRiMzFhYmViZjczNzBjMWFkZjVmIiwidXNlcl9pZCI6IjYifQ.nTXQPGEz-q02jyH9pl_JCLlIEAncgisaLpmznnShXYo",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/analytics/games/2/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "analytics",
+            "games",
+            "2",
+            ""
+          ]
         }
       },
       "response": []
@@ -310,10 +843,52 @@
       "name": "Analytics leaderboard stats",
       "id": "51b623cb-3443-4235-a0d8-d7bdd265401a",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTM4NTY3LCJpYXQiOjE3NzIxMzgyNjcsImp0aSI6ImRiMmJiOTMzMjI4YjQ0OGQ4MGQ2MGY1ODQzODNjMzRmIiwidXNlcl9pZCI6IjYifQ.lRrbtZRZQ1JXpCAv9qjVcGP73iZEjNrXDm2CUBJmv7Y",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/analytics/teams/2/leaderboard/?limit=1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "analytics",
+            "teams",
+            "2",
+            "leaderboard",
+            ""
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "1",
+              "uuid": "334d4b9b-6621-45e6-9fa7-0da1a1887d35"
+            }
+          ]
         }
       },
       "response": []
@@ -322,10 +897,36 @@
       "name": "Analytics trend list",
       "id": "5998f2c5-18d3-424c-bd33-a61bebf251b2",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTM4NTY3LCJpYXQiOjE3NzIxMzgyNjcsImp0aSI6ImRiMmJiOTMzMjI4YjQ0OGQ4MGQ2MGY1ODQzODNjMzRmIiwidXNlcl9pZCI6IjYifQ.lRrbtZRZQ1JXpCAv9qjVcGP73iZEjNrXDm2CUBJmv7Y",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/analytics/teams/2/trends/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "analytics",
+            "teams",
+            "2",
+            "trends",
+            ""
+          ]
         }
       },
       "response": []
@@ -334,10 +935,42 @@
       "name": "Analytics average",
       "id": "9d359098-0fe6-4ebf-a698-5066fc4fd25d",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTM4MjQ1LCJpYXQiOjE3NzIxMzc5NDUsImp0aSI6ImUyMjQyMDRiMmE4ZTQwZDg4ZWUyNzFlODI1MTM0NTE1IiwidXNlcl9pZCI6IjYifQ.kxLlot81dF9cnR5Sxi4rm5XacQ3JLQoFOpkShZHPz-c",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:8000/api/analytics/players/4/?team_id=2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "analytics",
+            "players",
+            "4",
+            ""
+          ],
+          "query": [
+            {
+              "key": "team_id",
+              "value": "2",
+              "uuid": "df4d12e7-16bb-4586-ad17-2595139405a5"
+            }
+          ]
         }
       },
       "response": []

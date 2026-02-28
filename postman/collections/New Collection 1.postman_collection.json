@@ -1,0 +1,21 @@
+{
+  "info": {
+    "_postman_id": "0cfbbb38-1250-429a-bf12-3d111d494167",
+    "name": "ALX review",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "id": "c01c7f36-2197-4cf8-9610-91afa038aac9",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}

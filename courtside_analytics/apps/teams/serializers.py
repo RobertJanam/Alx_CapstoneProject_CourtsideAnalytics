@@ -12,7 +12,7 @@ class TeamMemberSerializer(serializers.ModelSerializer):
 
     user_details = UserSerializer(source='user', read_only=True)
 
-    username = serializers.CharField(source='users.username', read_only=True)
+    username = serializers.CharField(source='user.username', read_only=True)
 
     class Meta:
         model = TeamMember
