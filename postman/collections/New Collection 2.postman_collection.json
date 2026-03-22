@@ -1,0 +1,21 @@
+{
+  "info": {
+    "_postman_id": "4ca03ed2-ddb8-4951-abba-77d432d1b024",
+    "name": "BinWise",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Classify",
+      "id": "d9eb42cb-6953-4c35-baa1-abc8330ee4ae",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}

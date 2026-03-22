@@ -207,7 +207,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxNTMxNDA3LCJpYXQiOjE3NzE1MzExMDcsImp0aSI6IjYxMzRhODg4NGEyOTQwYzE4YzU4YWI0NWI5ZjQ0NDBjIiwidXNlcl9pZCI6IjUifQ.R-GI9hYwJ8SEavrYG32zOLFNkkOKUKZREWtmXxytjEY",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzAyMDU3LCJpYXQiOjE3NzIzMDE3NTcsImp0aSI6IjdmN2VjYzZiOTY3MDQ3MDE5NDU2NTlkYjRmN2FmMDYzIiwidXNlcl9pZCI6IjUifQ.Cmik8CeLSOuvXfPeSVsehkZpnwRjn7jwTLKywtIcALg",
               "type": "string"
             }
           ]
@@ -331,7 +331,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzAyMDU3LCJpYXQiOjE3NzIzMDE3NTcsImp0aSI6IjdmN2VjYzZiOTY3MDQ3MDE5NDU2NTlkYjRmN2FmMDYzIiwidXNlcl9pZCI6IjUifQ.Cmik8CeLSOuvXfPeSVsehkZpnwRjn7jwTLKywtIcALg",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzEzNDY1LCJpYXQiOjE3NzIzMDk4NjUsImp0aSI6ImI2YzYwYThhM2JlMTQ3ODU5MzcyNjM5NjYwODU3ODIyIiwidXNlcl9pZCI6IjUifQ.HOvcEGjCxiOviCultPxCOMEHm7qGwNvg8JqGx6ZCYio",
               "type": "string"
             }
           ]
@@ -340,7 +340,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"name\": \"Kisumu Buck\",\r\n    \"description\": \"Changed team name\"\r\n}",
+          "raw": "{\r\n    \"name\": \"Kisumu Bucks\",\r\n    \"description\": \"Community basketball\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -422,7 +422,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTM1OTAxLCJpYXQiOjE3NzIxMzU2MDEsImp0aSI6IjJjM2JmNjE4NjFlMzRmYWNiNDJkMDI5MzJlMmZlMjRmIiwidXNlcl9pZCI6IjYifQ.darE2a0qcFMUbz1Gm7gFEqe9YJmGSBk8WafR0VKxsLY",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzA2NTk0LCJpYXQiOjE3NzIzMDI5OTQsImp0aSI6IjFlNTFkMTdjNDA4NDQ5Y2E5M2UyMDg0NjQ1NzIwYWJkIiwidXNlcl9pZCI6IjUifQ.Yve_96o8Dfpw38R0Fb7NffMsAGGKyXFLw62Au7UWLm4",
               "type": "string"
             }
           ]
@@ -459,7 +459,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTM2MjA1LCJpYXQiOjE3NzIxMzU5MDUsImp0aSI6IjZiNTIzNzVlNmYxNTQwZTdiMDVlNzQ1YzdlYjYwNzY3IiwidXNlcl9pZCI6IjYifQ.5TUOwJDrGJlyU8cM__4b-cS9q8yy-4G81FO6yQzXBKE",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzA2NTk0LCJpYXQiOjE3NzIzMDI5OTQsImp0aSI6IjFlNTFkMTdjNDA4NDQ5Y2E5M2UyMDg0NjQ1NzIwYWJkIiwidXNlcl9pZCI6IjUifQ.Yve_96o8Dfpw38R0Fb7NffMsAGGKyXFLw62Au7UWLm4",
               "type": "string"
             }
           ]
@@ -540,7 +540,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMTQwMDg0LCJpYXQiOjE3NzIxMzk3ODQsImp0aSI6ImFkNmVkZTBlZGY5MTQ4MWRiZjZlODliODU4NTgwZDlhIiwidXNlcl9pZCI6IjYifQ.Rvz5A5SZJVqVza0AqrZI5eO2_ULmqBIjjMVVcfJ5Qf4",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzA2NTk0LCJpYXQiOjE3NzIzMDI5OTQsImp0aSI6IjFlNTFkMTdjNDA4NDQ5Y2E5M2UyMDg0NjQ1NzIwYWJkIiwidXNlcl9pZCI6IjUifQ.Yve_96o8Dfpw38R0Fb7NffMsAGGKyXFLw62Au7UWLm4",
               "type": "string"
             }
           ]
@@ -971,6 +971,18 @@
               "uuid": "df4d12e7-16bb-4586-ad17-2595139405a5"
             }
           ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "6541fd0c-b1c8-46a6-9405-7319e2c3908d",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
         }
       },
       "response": []

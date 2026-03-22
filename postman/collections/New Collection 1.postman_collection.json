@@ -6,13 +6,207 @@
   },
   "item": [
     {
-      "name": "New Request",
+      "name": "Register_1",
       "id": "c01c7f36-2197-4cf8-9610-91afa038aac9",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"username\": \"marksmith\",\r\n    \"email\": \"marksmith@gmail.com\",\r\n    \"password\": \"MArk123@#\",\r\n    \"password2\": \"MArk123@#\",\r\n    \"phone_number\": \"0712345678\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/auth/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "auth",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register_2",
+      "id": "62695437-0f30-4b07-93f5-042365e1b695",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"tomdunnie\",\r\n    \"email\": \"tomdunnie@gmail.com\",\r\n    \"password\": \"TOm123@#\",\r\n    \"password2\": \"TOm123@#\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login_1",
+      "id": "fde6e831-a685-44a3-b961-a91d2105e235",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
           "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Team",
+      "id": "a588d0fa-fb40-4e57-9c80-1331f7b7c027",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzEyNDk2LCJpYXQiOjE3NzIzMDg4OTYsImp0aSI6IjRjZTE3ZTI3OWNhNDRlNjNiODA1ZmI3MWJiYTFlMWZmIiwidXNlcl9pZCI6IjgifQ.6EFkVJnHVaGj-5CTk1A2ny7t7Rsmb1xZvoZrfj7crTM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Alliance Sharks\",\r\n    \"description\": \"Community basketball team\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/teams/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login_2",
+      "id": "4c2518d9-f6bb-4c97-a3ea-313fd055c8ae",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Join Team",
+      "id": "478eac11-3b35-41ad-b60b-ff747696e7df",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Members",
+      "id": "07db192f-266a-4a83-bdad-d78f501ab6d3",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Game",
+      "id": "3bcc8a50-487f-40e4-b503-1a538a9b966a",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzEzMDIwLCJpYXQiOjE3NzIzMDk0MjAsImp0aSI6Ijg0ZjQ2ZGUzYmZkMjQ0ZDk5MzQ0OGQyODFjODE1MTRmIiwidXNlcl9pZCI6IjgifQ.ONiT8WT5ka5VU2c0w2bbxM5k8NnO98T4KMkC8RFyPUI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"team\": 3,\r\n    \"opponent_name\": \"Mombasa Sharks\",\r\n    \"game_date\": \"2026-02-25\",\r\n    \"venue\": \"Sports Ground\",\r\n    \"team_score\": 78,\r\n    \"opponent_score\": 65,\r\n    \"q1_team\": 17, \"q1_opponent\": 13,\r\n    \"q2_team\": 15, \"q2_opponent\": 20,\r\n    \"q3_team\": 25, \"q3_opponent\": 17,\r\n    \"q4_team\": 21, \"q4_opponent\": 15\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/teams/3/games/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "teams",
+            "3",
+            "games",
+            ""
+          ]
         }
       },
       "response": []
