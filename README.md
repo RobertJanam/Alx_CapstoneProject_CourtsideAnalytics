@@ -144,7 +144,7 @@ Ensure you have the following installed:
 4. Then paste the secret key provided as a value in your variable SECRET_KEY. It should look something like this:
 
     ```env
-    SECRET_KEY=django-insecure-8x^f7q%k3m#p9z$w2n&b5v@t6y*c4r!a1s
+    SECRET_KEY="django-insecure-8x^f7q%k3m#p9z$w2n&b5v@t6y*c4r!a1s"
     ```
 
 5. If you don't have mysql workbench installed, you can use the default sqlite3.
