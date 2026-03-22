@@ -117,7 +117,6 @@ Ensure you have the following installed:
     ```
 
 ### Environment Variables
-
 1.  Create a `.env` file in the project root directory (the same level as `manage.py`).
 2.  Copy the contents from `.env.example` and fill in your values.
 
@@ -128,16 +127,64 @@ Ensure you have the following installed:
     DEBUG=True
 
     # Database
-    DB_NAME=courtside_db
-    DB_USER=root
-    DB_PASSWORD=your_mysql_password
-    DB_HOST=localhost
-    DB_PORT=3306
+    DB_NAME=dbname
+    DB_USER=username
+    DB_PASSWORD=password
+    DB_HOST=hostname
+    DB_PORT=portname
     ```
+
+3. To get your secret key for local development, open your terminal and paste this:
+
+    ```bash
+    python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+    ```
+    You may need to use python3 instead of python in OS using UNIX-based.
+
+4. Then paste the secret key provided as a value in your variable SECRET_KEY. It should look something like this:
+
+    ```env
+    SECRET_KEY=django-insecure-8x^f7q%k3m#p9z$w2n&b5v@t6y*c4r!a1s
+    ```
+
+5. If you don't have mysql workbench installed, you can use the default sqlite3.
+6. After creating an env file, only copy your SECRET_KEY.
+7. Replace this in your settings/development.py:
+
+    ```env
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'PORT': os.getenv('DB_PORT', '3306'),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            },
+        }
+    }
+    ```
+
+    to this
+
+    ```env
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+    ```
+
+8. Similarly, do the same with to get the SECRET_KEY
+
 
     > **IMPORTANT:** Never commit your `.env` file to version control. It is already listed in `.gitignore`.
 
 ### Database Setup
+*(If you have mysql workbench, you'll create the db in the application first. If you are using any other RDBMS, do what you are required. If it's sqlite3, skip the first step.)*
 
 1.  **Create the Database:** Open MySQL Workbench and create a new database schema. The name should match the `DB_NAME` in your `.env` file.
     ```sql
